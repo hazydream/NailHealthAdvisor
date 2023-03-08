@@ -14,18 +14,20 @@ You can download the dataset from this [OneDrive](https://1drv.ms/u/s!AsGDCQXYI6
 There are several versions of the dataset available from OneDrive, as follows:
 * v1: the raw dataset, which is the same as the official version
 * v2: the dataset after running organizer.py and performing some manual organization
-* v3: the dataset with a few additional images that we have added
+* v3: the same as v2, but with the Lindsay's nail class removed due to having only two images
+* v4: the dataset with a few additional images that we have added
 
 
 # Dataset Preparation
 **Case 1**: If you have downloaded the dataset from OneDrive, simply extract the archive in the same directory as the notebooks.
 
-**Case 2**: If you have downloaded the dataset from Roboflow Universe in "Multi-Label Classification" format, follow these steps:
+**Case 2**: If you have downloaded the dataset from Roboflow Universe in "Multi-Label Classification" format, follow these steps to obtain v3 of the dataset:
 
-Extract the archive and navigate to the extracted directory, where you should see the `train`, `valid`, and `test` directories.
-Copy the `organizer.py` file to this directory and run it. This will organize the images into their respective classes and create a new directory called `organized` at the same level as the aforementioned directories.
-Copy the entire `organized` directory to the same level as the notebooks.
-Rename the `organized` directory to `dataset` or any other name of your choosing.
+1. Extract the downloaded archive and navigate to the extracted directory. You should see three directories: `train`, `valid`, and `test`. (v1)
+2. Copy the `organizer.py` file to the same directory and run it. This will organize the images into their respective classes and create a new directory called `organized`, which will be located at the same level as the three directories mentioned above.
+3. Copy the entire `organized` directory to the same level as the notebooks.
+4. Rename the `organized` directory to `dataset` or any other name that suits your preference. (v2)
+5. Navigate into the `dataset` directory and delete the `Lindsay-s Nail` directory. (v3)
 
 The expected directory structure for the dataset is as follows:
 ```
@@ -43,9 +45,9 @@ Please note that this project does not offer any preprocessing utility. Therefor
 
 
 # How to Run (the Unfinished for Now)
-Please run the latest version of the available notebooks from top to bottom, and there should not be any errors (hopefully).
+Run the latest version of the available notebooks from top to bottom, and there should not be any errors (hopefully).
 
-*Please note that some of the notebooks provided in this repository may be outdated or unupdated. As such, you may need to make edits to the notebooks to ensure that they are fully functional.*
+*It is important to note that the dataset paths in some of the notebooks may be outdated. Therefore, please verify that the dataset path is correct before running the notebooks.*
 
 
 # Current Progress
